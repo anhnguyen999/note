@@ -1,3 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Access Protected Drive Link</title>
 <script>
-  window.location.replace("https://drive.google.com/drive/folders/19gsfYYVb_OLJ2h6krmilEE4QiHPkN_bp?usp=sharing");
+  function checkAccessCode() {
+    var accessCode = prompt("Please enter the access code:");
+    if (accessCode === "0106") {
+      window.location.replace("https://drive.google.com/drive/folders/19gsfYYVb_OLJ2h6krmilEE4QiHPkN_bp?usp=sharing");
+    } else {
+      alert("Incorrect access code. Access denied.");
+    }
+  }
 </script>
+</head>
+<body onload="checkAccessCode();">
+  <h1>Welcome to My Website</h1>
+  <p>Please enter the access code to proceed to the protected link.</p>
+</body>
+</html>
